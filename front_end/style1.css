@@ -1,0 +1,222 @@
+/* *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+     display: flex;
+     height: auto;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     background: lightpink;
+} */
+#reg-form{
+     padding:70px 0px ;
+     background:white;
+     
+}
+
+.outer-container{
+     width: 70%;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center; 
+     /* align-items: center; */
+     margin: auto;
+}
+
+
+.container{
+     max-width: 550px;
+     width: 100%;
+     background: white;
+     padding: 25px 30px;
+     border-radius: 8px;
+     position: relative;
+     border: 1px solid #019587;
+}
+.container .form-tittle{
+     font-size: 25px;
+     font-weight: 500;
+     position: relative;
+}
+
+.container  .form-tittle::before{
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 4px;
+     width: 25px;
+     border-radius: 4px;
+     background: linear-gradient(rgba(132, 94, 94, 0.5),#019587);
+
+}
+.container form .user-details{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin: 20px 0px 12px 0px;
+}
+
+form .user-details .input-box {
+          width: calc(100%);
+          margin-bottom: 8px;
+}
+
+.user-details .input-box .details{
+     flex-basis: auto;
+     font-weight: 500;
+     margin-bottom: 5px;
+}
+.user-details .input-box  input{
+     height: 30px;
+     width: 100%;
+     outline: none;
+     border-radius: 5px;
+     padding-left: 15px;
+     font-size: 16px;
+     border: 1px solid #ccc;
+     border-bottom-width: 2px;
+     transition: all .3s ease;
+}
+.user-details .input-box  input:focus,
+.user-details .input-box  input:valid{
+     border-color: #019587;
+}
+
+.input-select select{
+     background: white;
+   
+}
+select{
+     color: black;
+     padding-left: 16px;
+     border: 1px solid #ccc;
+     font-size: 16px;
+      /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;  */
+     border-radius: 5px;
+     border-bottom-width: 2px;
+     cursor: pointer;
+     user-select: none;
+}
+/* 
+option{
+  position: absolute;
+  background-color: lightpink;
+  /* border-bottom-width: 2px; */
+  /* border-radius: 5px; */
+  /*top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+} */
+
+.input-select select:focus{
+     border-color: #019587;
+     transition: all .5s ease;
+
+}
+
+form .gender-details .gender-tittle{
+     font-size: 16px;
+     font-weight: 500;
+     margin-bottom: 8px;
+}
+
+.category{
+     margin: 8px 0px ; 
+     margin-bottom: 20px;
+     display: flex;
+     justify-content: flex-start;
+   
+}
+.radio-option{
+     margin-right:5%;
+     position:relative;
+    
+}
+.button{
+     display: flex;
+}
+.button > #btn{
+     background:white ;
+     border-radius: 6px;
+     font-size: 16px;
+     border-color: #019587;
+     border: 1px solid #019587;
+     padding: 4px;
+     position: relative;
+     z-index: 1;
+     margin:auto ;
+     width: 50%; 
+     justify-content: center;
+     flex-wrap: wrap;
+     
+}
+.button #btn span{
+     width: 0;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background: #019587;
+     z-index: -1;
+     transition: all .5s ease-in-out;
+     border-radius: 6px;
+}
+
+.button #btn:hover{
+    color: white;
+    transition: .5s;
+    cursor:pointer;
+    
+}
+.button #btn:hover span{
+     width: 100%; 
+}
+@media screen and (max-width:410px) {
+     .category{
+          display: inline;
+     } 
+     .radio-option{
+          margin: 10px;
+     }
+}
+.swal-modal {
+     border-radius: 6px;
+     border: 1px solid  #F5DADF;
+}
+.swal-button {
+     background-color: #F5DADF;
+     border:0px;
+     color:black;
+     font-size: 14px;
+}
+
+.swal-button:not([disabled]):hover{
+     transform-style: preserve-3d;
+     transition: .3s all;
+     background-color: #fff;
+}
+.form-img{
+     flex-basis: 50%;
+}
+.form-img img{
+     left: 15%;
+     width: 13.5%;
+     height: auto;
+     
+     position:absolute;
+}
+@media screen and (max-width:770px ){
+     .form-img img{
+          width: 30%;
+          flex-basis: 100%;
+     }
+     .form-img{
+          flex-basis: 100%;
+     }
+}
